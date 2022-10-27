@@ -47,7 +47,7 @@ reduced_df = raw_df[[#'Switch ID',
 labels_binlab = labels_binlab.replace(to_replace= ["Attack", "Normal"], value= [1 , 0])
 labels_labcat = labels_labcat.replace(to_replace= ['Blackhole', 'Diversion', 'Normal', 'Overflow', 'PortScan', 'TCP-SYN'], value= [1 , 2, 3, 4, 5, 6])
 
-# separate data in train and test sets, using binlab labels.
+# separated data in train and test sets, using binlab labels.
 X_train_bin, X_test_bin, y_train_bin, y_test_bin = train_test_split(r_features,labels_binlab, random_state= 0 , test_size= 0.2)
 
 
