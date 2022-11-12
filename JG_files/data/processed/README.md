@@ -51,6 +51,7 @@ labels_labcat = labels_labcat.replace(to_replace= ['Blackhole', 'Diversion', 'No
 X_train_bin, X_test_bin, y_train_bin, y_test_bin = train_test_split(r_features,labels_binlab, random_state= 0 , test_size= 0.2)
 
 
+
 created new reduced data with labels 'red_new'
 red_new_df = raw_df[[#'Switch ID', # this is no general info but data from setup used to model data
                         #'Port Number', # this is no general info but data from setup used to model data
