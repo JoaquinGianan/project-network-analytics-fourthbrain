@@ -20,7 +20,7 @@ class Result(BaseModel):
 
 @app.get("/ping")
 def pong():
-    return {"ping": "pong!"}
+    return {"ping": "pong!"} , print("aleluya")  # added print command to see how it works in the swagger ui.
 
 @app.post("/testeo") # a test function to check the format of the input data
 def testeo(datos : Samplein):
@@ -90,7 +90,7 @@ def get_sample_prediction(id: int):
     sample = sample_generator(id)
     result = predi(sample[0])
 
-    return print("The predicted nature of the network status is: {} and the actual status is: {}.".format(result , sample[1]))    
+    return print("The predicted nature of the network status is: {} and the actual status is: {}.".format(result , sample[1]))  , result, sample[1]  #print out and two objects as returns
 
 
 

@@ -1,7 +1,7 @@
 Capstone_MLE9
 ==============================
 
-Renato, this is a summary of what is currently in the src folder and the model.py and main.py files.
+Renato, this is a summary of what is currently in my src folder and the model.py and main.py files.
 currently everything is working (with more or less intervention) through fastapi and uvicorn.
 
 # model.py
