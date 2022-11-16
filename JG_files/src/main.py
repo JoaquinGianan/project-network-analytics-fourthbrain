@@ -1,7 +1,7 @@
 
 from fastapi import FastAPI, Query, HTTPException  # why are we importing Query? it is not used.
 from pydantic import BaseModel , Json
-from model import predi, sample_generator2
+from model import predi, sample_generator2 , sample_generator
 from typing import Dict, List
 import pandas as pd  #just for converting back the dict to a  dataframe
 import joblib
@@ -85,6 +85,12 @@ def get_sample_prediction():
     return print("The predicted nature of the network status is: {} and the actual status is: {}.".format(result , sample[1]))
 
     
+@app.post("/all_in_prediction2") # receives an id value (integer) (of the sample in the test set) and returns the prediction and the sample's label.
+def get_sample_prediction(id: int):
+    sample = sample_generator(id)
+    result = predi(sample[0])
+
+    return print("The predicted nature of the network status is: {} and the actual status is: {}.".format(result , sample[1]))    
 
 
 

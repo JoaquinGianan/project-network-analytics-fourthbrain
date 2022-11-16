@@ -69,7 +69,12 @@ def sample_generator2():
 
 
 
-def predi(sample):   
+def predi(sample):
+    """
+    predi function: takes a sample network interaction in the form of a dataframe and 
+    retuns string with the prediction of the network event.
+    
+    """
     model_name = "model_jg_01.joblib"
     model_file = Path(BASE_DIR).joinpath(model_name)
     
