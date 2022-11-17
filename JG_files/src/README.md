@@ -28,3 +28,4 @@ all_in_prediction2: same as above but you enter the id as a required data at the
 
 
 
+uvicorn main:app --reload --workers 1 --host 0.0.0.0 --port 8000
